@@ -1,0 +1,21 @@
+<header>
+    <div>
+        <span class="logo1">
+            Angular hosted Blog Spot
+        </span>
+    </div>
+
+    <main  *ngIf = 'blogPosts$ | async as blogPosts' >
+        <pre>
+        {{blogPosts | json }}
+    </pre>
+
+    <!-- <div class="blogPost-container " *ngFor="let blogPost of blogPosts.Asset">
+        <!-- <img src="//images.ctfassets.net/xtahtliuu1qc/6qWaBfSvjBqlQRz1PZeCFZ/84e89f22bee4496d6ef1dc780596d3dc/Gustav_chocolate.jpg" alt = >  -->
+<!--         
+            <img src="blogPost.fields.file.url" alt = > 
+        <h1> {{blogPost.title}}</h1>
+
+    </div> --> 
+    </main>
+</header>
