@@ -4,18 +4,37 @@
             Angular hosted Blog Spot
         </span>
     </div>
-
-    <main  *ngIf = 'blogPosts$ | async as blogPosts' >
-        <pre>
-        {{blogPosts | json }}
-    </pre>
-
-    <!-- <div class="blogPost-container " *ngFor="let blogPost of blogPosts.Asset">
-        <!-- <img src="//images.ctfassets.net/xtahtliuu1qc/6qWaBfSvjBqlQRz1PZeCFZ/84e89f22bee4496d6ef1dc780596d3dc/Gustav_chocolate.jpg" alt = >  -->
-<!--         
-            <img src="blogPost.fields.file.url" alt = > 
-        <h1> {{blogPost.title}}</h1>
-
-    </div> --> 
-    </main>
 </header>
+
+<main *ngIf="blogPosts$ | async as blogPosts">
+    <!-- <pre>{{ blogPosts | json }}</pre> -->
+
+    <div class="blog-posts-container" *ngFor="let item of blogPosts.items">
+<span>
+        <img [src]="item.fields.featImage.fields.file.url" alt="" class="cat-image">
+            <h2 class="title">{{item.fields.title}}</h2>`
+            <p class="author"> {{item.fields.author}}</p>
+            <p class="summarry"> {{item.fields.summarry}}</p>
+            <a [routerLink]='["blog",item.sys.id]'> Read More</a>
+    </span>
+    <span>
+        <img [src]="item.fields.mediaItem2.fields.file.url" alt="" class="car-image">
+        <h2 class="title">{{item.fields.title}}</h2>
+        <p class="author"> {{item.fields.author}}</p>
+        <p class="summarry"> {{item.fields.summarry}}</p>
+        <a [routerLink]='["blog",item.sys.id]'> Read More</a>
+
+
+    </span>
+    <span>
+        <img [src]="item.fields.mediaItem3.fields.file.url" alt="" class="food-image">
+        <h2 class="title">{{item.fields.title}}</h2>
+        <p class="author"> {{item.fields.author}}</p>
+        <p class="summarry"> {{item.fields.summarry}}</p>
+            <a [routerLink]='["blog",item.sys.id]'> Read More</a>
+
+
+    </span>
+</div>
+
+</main>
