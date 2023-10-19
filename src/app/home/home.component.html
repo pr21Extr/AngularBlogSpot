@@ -10,31 +10,43 @@
     <!-- <pre>{{ blogPosts | json }}</pre> -->
 
     <div class="blog-posts-container" *ngFor="let item of blogPosts.items">
-<span>
+<div class="card-cat">
         <img [src]="item.fields.featImage.fields.file.url" alt="" class="cat-image">
-            <h2 class="title">{{item.fields.title}}</h2>`
+            <h2 class="title">{{item.fields.title}}</h2>
+            <br/>
             <p class="author"> {{item.fields.author}}</p>
+            <br/>
             <p class="summarry"> {{item.fields.summarry}}</p>
-            <a [routerLink]='["blog",item.sys.id]'> Read More</a>
-    </span>
-    <span>
+            <br/>
+            <button mat-button [routerLink]="['blog',item.sys.id]">Read more</button>
+
+
+</div>
+    <div class="car-image">
         <img [src]="item.fields.mediaItem2.fields.file.url" alt="" class="car-image">
         <h2 class="title">{{item.fields.title}}</h2>
+        <br/>
         <p class="author"> {{item.fields.author}}</p>
+        <br/>
         <p class="summarry"> {{item.fields.summarry}}</p>
-        <a [routerLink]='["blog",item.sys.id]'> Read More</a>
+        <br/>
+        <button mat-button [routerLink]="['blog',item.sys.id]">Read more</button>
 
 
-    </span>
-    <span>
+    </div>
+    <div class="food-image">
         <img [src]="item.fields.mediaItem3.fields.file.url" alt="" class="food-image">
+        <br/>
         <h2 class="title">{{item.fields.title}}</h2>
+        <br/>
         <p class="author"> {{item.fields.author}}</p>
+        <br/>
         <p class="summarry"> {{item.fields.summarry}}</p>
-            <a [routerLink]='["blog",item.sys.id]'> Read More</a>
+        <br/>
+        <button mat-button [routerLink]="['blog',item.sys.id]">Read more</button>
 
 
-    </span>
+    </div>
 </div>
 
 </main>
