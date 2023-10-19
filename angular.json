@@ -4,6 +4,10 @@
   "newProjectRoot": "projects",
   "projects": {
     "angular-blogSpot": {
+      "i18n":{
+        "sourceLocale": "en-US",
+        "locales": {"es-PR":"src/locales/messages.es.xlf"}
+      },
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,6 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "localize":["es-PR"],
             "outputPath": "dist/angular-blog-spot",
             "index": "src/index.html",
             "main": "src/main.ts",
