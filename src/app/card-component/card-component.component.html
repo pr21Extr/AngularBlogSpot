@@ -1,0 +1,30 @@
+
+<div class="content">
+    <!-- <div fxLayout="row" fxLayoutAlign="space-evenly center" > -->
+            <mat-card class="mat-elevation-z4"  routerLink="blog"
+            (mouseenter)="changeCursor()" (mouseleave)="restoreCursor()" [class.custom-cursor]="isHovered">
+                <mat-card-header >   
+                    <mat-card-title class="card-title">
+                    </mat-card-title>
+                    
+                </mat-card-header>
+                <img mat-card-image  src="../../assets/blog.png" alt="Blog"
+                >
+
+                <mat-card-content>  
+                    <p>
+                        Click on the card above to check out  my blog with some lorem ipsum content 
+                        which is being generated using contentful as a backend API to serve all the data in the blog.
+                        All blog data is dynamic and is handled by contentful itself.
+                    </p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-button>Share</button>
+                </mat-card-actions>
+            </mat-card>
+
+                        
+        
+        <!-- </div> -->
+    </div>
+
