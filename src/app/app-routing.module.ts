@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { BlogPostComponent } from './blog-post/blog-post.component';
 import { CardComponent } from './card-component/card-component.component';
+import { LocalizerComponent } from './localizer/localizer.component';
 
 const routes: Routes = [
   {
@@ -16,7 +17,11 @@ const routes: Routes = [
   {
       path: 'blog/:id',
       component: BlogPostComponent
-  }
+  },
+  {
+    path: 'localize',
+    component: LocalizerComponent
+}
 ];
 
 @NgModule({

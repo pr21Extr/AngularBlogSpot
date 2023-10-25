@@ -1,4 +1,4 @@
-
+<div fxLayout="row wrap" fxLayoutAlign="space-evenly cemter">
 <div class="content">
     <!-- <div fxLayout="row" fxLayoutAlign="space-evenly center" > -->
             <mat-card class="mat-elevation-z4"  routerLink="blog"
@@ -28,3 +28,29 @@
         <!-- </div> -->
     </div>
 
+    <div class="content">
+        <!-- <div fxLayout="row" fxLayoutAlign="space-evenly center" > -->
+                <mat-card class="mat-elevation-z4"  routerLink="localize"
+                (mouseenter)="changeCursor()" (mouseleave)="restoreCursor()" [class.custom-cursor]="isHovered">
+                    <mat-card-header >   
+                        <mat-card-title class="card-title">
+                        </mat-card-title>
+                        
+                    </mat-card-header>
+                    <img mat-card-image  src="../../assets/on_device_translate2x.png" alt="Localizer">
+    
+                    <mat-card-content>  
+                        <p>
+                            Click on the card above to check out my implementation of i18n.
+                        </p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button mat-button>Share</button>
+                    </mat-card-actions>
+                </mat-card>
+    
+                            
+            
+            <!-- </div> -->
+        </div>
+    </div>
